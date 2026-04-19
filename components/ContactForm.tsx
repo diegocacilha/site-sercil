@@ -1,27 +1,36 @@
 "use client";
 
 import { useState } from "react";
+import { db } from "@/lib/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Salvar no Firestore
+      await addDoc(collection(db, "contacts"), {
+        name,
+        email,
+        message: message || "",
+        createdAt: serverTimestamp(),
+      });
 
-    // Here you would integrate with your email service
-    console.log({ name, email, message });
-
-    setStatus("success");
-    setEmail("");
-    setName("");
-    setMessage("");
+      setStatus("success");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      console.error("Erro ao salvar contato:", error);
+      setStatus("error");
+    }
   };
 
   return (
@@ -103,6 +112,12 @@ export default function ContactForm() {
             {status === "success" && (
               <p className="text-center text-green-600 text-sm">
                 ✓ Recebemos sua solicitação! Entraremos em contato em breve.
+              </p>
+            )}
+
+            {status === "error" && (
+              <p className="text-center text-red-600 text-sm">
+                Ocorreu um erro. Por favor, tente novamente.
               </p>
             )}
 
