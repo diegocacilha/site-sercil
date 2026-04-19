@@ -15,6 +15,7 @@ export default function ContactForm() {
     setStatus("loading");
 
     try {
+      console.log("Teste do diego 2");
       // Salvar no Firestore
       await addDoc(collection(db, "contacts"), {
         name,
@@ -27,6 +28,7 @@ export default function ContactForm() {
       setName("");
       setEmail("");
       setMessage("");
+      console.log("Teste do diego");
     } catch (error) {
       console.error("Erro ao salvar contato:", error);
       setStatus("error");
