@@ -15,7 +15,6 @@ export default function ContactForm() {
     setStatus("loading");
 
     try {
-      console.log("Teste do diego 2" + process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
       // Salvar no Firestore
       await addDoc(collection(db, "contacts"), {
         name,

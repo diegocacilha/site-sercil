@@ -20,6 +20,8 @@ let teste = () => {
     messagingSenderId: firebaseConfig.messagingSenderId ? "OK" : "MISSING",
     appId: firebaseConfig.appId ? "OK" : "MISSING",
   });
+  console.log('Olha a API KEY Aaaaqui: ' + firebaseConfig.apiKey);
+  console.log('E o domínio: ' + firebaseConfig.authDomain);
 }
 
 
@@ -28,6 +30,7 @@ let app: FirebaseApp;
 let db: Firestore;
 
 function initializeFirebase() {
+  console.log('TEste do Teste');
   if (getApps().length === 0) {
     console.log("[Firebase] Inicializando nova instância...");
     teste();
