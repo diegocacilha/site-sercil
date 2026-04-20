@@ -24,3 +24,4 @@ substitutions:
 # sejam automaticamente mapeadas como variáveis de ambiente em todos os passos do build.
 options:
   automapSubstitutions: true
+  logging: CLOUD_LOGGING_ONLY
