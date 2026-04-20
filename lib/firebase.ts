@@ -11,14 +11,17 @@ const firebaseConfig = {
 };
 
 // Log para debug (verificar se as variáveis estão chegando)
-console.log("[Firebase] Config recebida:", {
-  apiKey: firebaseConfig.apiKey ? "OK" : "MISSING",
-  authDomain: firebaseConfig.authDomain ? "OK" : "MISSING",
-  projectId: firebaseConfig.projectId ? "OK" : "MISSING",
-  storageBucket: firebaseConfig.storageBucket ? "OK" : "MISSING",
-  messagingSenderId: firebaseConfig.messagingSenderId ? "OK" : "MISSING",
-  appId: firebaseConfig.appId ? "OK" : "MISSING",
-});
+let teste = () => {
+  console.log("[Firebase] Config recebida:", {
+    apiKey: firebaseConfig.apiKey ? "OK" : "MISSING",
+    authDomain: firebaseConfig.authDomain ? "OK" : "MISSING",
+    projectId: firebaseConfig.projectId ? "OK" : "MISSING",
+    storageBucket: firebaseConfig.storageBucket ? "OK" : "MISSING",
+    messagingSenderId: firebaseConfig.messagingSenderId ? "OK" : "MISSING",
+    appId: firebaseConfig.appId ? "OK" : "MISSING",
+  });
+}
+
 
 // Inicialização segura (evita múltiplas instâncias)
 let app: FirebaseApp;
@@ -27,6 +30,7 @@ let db: Firestore;
 function initializeFirebase() {
   if (getApps().length === 0) {
     console.log("[Firebase] Inicializando nova instância...");
+    teste();
     app = initializeApp(firebaseConfig);
   } else {
     console.log("[Firebase] Reutilizando instância existente...");
