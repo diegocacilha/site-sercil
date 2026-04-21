@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t border-gray-100 py-8">
@@ -6,9 +8,17 @@ export default function Footer() {
           <p className="text-sm text-muted">
             © {new Date().getFullYear()} Sercil. Todos os direitos reservados.
           </p>
-          <p className="text-sm text-muted">
-            Desenvolvido com excelência pela Sercil
-          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/politica-de-privacidade"
+              className="text-sm text-muted hover:text-accent transition-colors"
+            >
+              Política de Privacidade
+            </Link>
+            <p className="text-sm text-muted">
+              Desenvolvido com excelência pela Sercil
+            </p>
+          </div>
         </div>
       </div>
     </footer>
