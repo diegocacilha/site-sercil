@@ -27,7 +27,6 @@ export default function ContactForm() {
       setName("");
       setEmail("");
       setMessage("");
-      console.log("Teste do diego");
     } catch (error) {
       console.error("Erro ao salvar contato:", error);
       setStatus("error");
