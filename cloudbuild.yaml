@@ -1,6 +1,8 @@
 # cloudbuild.yaml
 steps:
+  # Passo 1: Construir e publicar a imagem
   - name: 'gcr.io/k8s-skaffold/pack'
+    id: 'build'
     args:
       - 'build'
       - '--builder=gcr.io/buildpacks/builder:latest'
@@ -13,6 +15,20 @@ steps:
       - '--env=NEXT_PUBLIC_FIREBASE_APP_ID=$_NEXT_PUBLIC_FIREBASE_APP_ID'
       - 'us-east4-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/$REPO_NAME:$COMMIT_SHA'
       - '--publish'
+
+  # Passo 2: Implantar no Cloud Run (ESTE ESTAVA FALTANDO!)
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'deploy'
+    args:
+      - 'gcloud'
+      - 'run'
+      - 'deploy'
+      - 'site-sercil-new'                          # ← Nome do seu serviço
+      - '--image=us-east4-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/$REPO_NAME:$COMMIT_SHA'
+      - '--region=us-east4'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
+
 options:
   automapSubstitutions: true
   logging: CLOUD_LOGGING_ONLY
