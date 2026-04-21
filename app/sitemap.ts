@@ -12,21 +12,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/portifolio`,
+      url: `${baseUrl}/#portifolio`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/servicos`,
+      url: `${baseUrl}/#servicos`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/contato`,
+      url: `${baseUrl}/#contato`,
       lastModified: currentDate,
       changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/politica-de-privacidade`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
       priority: 0.7,
     }
   ]
