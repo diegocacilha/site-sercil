@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "Sercil | Desenvolvimento de Sistemas Sob Medida",
   description:
     "Transforme sua operação com sistemas web personalizados. A Sercil desenvolve soluções escaláveis, seguras e focadas em resultados para o seu negócio.",
+  alternates: {
+    canonical: "https://www.sercil.com.br",
+  },
   keywords:
     "desenvolvimento de sistemas, software house, aplicações web, sistemas personalizados, desenvolvimento web",
   authors: [{ name: "Sercil" }],
