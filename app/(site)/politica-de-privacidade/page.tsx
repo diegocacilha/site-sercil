@@ -2,9 +2,12 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidade | Sercil",
+  title: "Sercil | Política de Privacidade",
   description:
     "Saiba como a Sercil coleta, utiliza e protege seus dados pessoais em conformidade com a Lei Geral de Proteção de Dados (LGPD).",
+    alternates: {
+    canonical: "https://www.sercil.com.br/politica-de-privacidade",
+  },
   robots: {
     index: true,
     follow: true,
