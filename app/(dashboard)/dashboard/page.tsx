@@ -1,7 +1,7 @@
 import DashboardContent from "./DashboardContent";
 
 export const metadata = {
-  title: "Dashboard Analytics | Sercil",
+  title: "Sercil | Dashboard Analytics",
   description: "Demonstração de dashboard de análise de dados em tempo real",
 };
 
