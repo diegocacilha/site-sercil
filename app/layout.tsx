@@ -62,10 +62,10 @@ export const metadata: Metadata = {
     "sistemas personalizados para empresas",
 
     // SEO local (ajuste conforme sua cidade/região)
-    "desenvolvimento de software Curitiba",
-    "sistemas web Curitiba",
-    "empresa de software Curitiba",
-    "software sob medida Paraná",
+    "desenvolvimento de software Blumenau",
+    "sistemas web Blumenau",
+    "empresa de software Blumenau",
+    "software sob medida Santa Catarina",
 
     // Long-tail estratégicas
     "criação de sistema web para empresas",
