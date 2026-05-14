@@ -14,7 +14,7 @@ export default function DashboardLayout({
     <Header />
     <main className="flex-1">{children}</main>
     <GoogleAnalytics />
-    <CookieBanner />;    
+    <CookieBanner />
     <Footer />
   </>;
 }

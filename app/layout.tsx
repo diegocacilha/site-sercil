@@ -72,7 +72,8 @@ export const metadata: Metadata = {
     "desenvolvimento de portal corporativo sob medida",
     "software para automatizar processos empresariais",
     "sistema web integrado com ERP",
-    "portal corporativo para gestão empresarial"
+    "portal corporativo para gestão empresarial",
+    "criação de sistema web para empresas em Blumenau"
   ],
   authors: [{ name: "Sercil" }],
   openGraph: {
