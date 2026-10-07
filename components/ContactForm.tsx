@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { db } from "@/lib/firebase";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { sendContactEmail } from "@/actions/sendContact";
 
 export default function ContactForm() {
   const [email, setEmail] = useState("");
@@ -15,20 +14,23 @@ export default function ContactForm() {
     setStatus("loading");
 
     try {
-      // Salvar no Firestore
-      await addDoc(collection(db, "contacts"), {
+      // Chama a Server Action diretamente, como se fosse uma função local
+      const result = await sendContactEmail({
         name,
         email,
         message: message || "",
-        createdAt: serverTimestamp(),
       });
+
+      if (!result.success) {
+        throw new Error(result.message);
+      }
 
       setStatus("success");
       setName("");
       setEmail("");
       setMessage("");
     } catch (error) {
-      console.error("Erro ao salvar contato:", error);
+      console.error("Erro ao enviar contato:", error);
       setStatus("error");
     }
   };
