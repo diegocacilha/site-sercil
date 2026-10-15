@@ -1,8 +1,8 @@
 const services = [
   {
-    title: "Sistemas Web Personalizados",
+    title: "Sistema que segue SEU processo",
     description:
-      "Aplicações desenvolvidas sob medida para automatizar processos, gerenciar dados e otimizar a operação do seu negócio.",
+      "Chega de se adaptar a sistema engessado de R$197/mês. A gente mapeia como você já trabalha no Excel/WhatsApp e automatiza exatamente do seu jeito. Sem mudar seu time.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -20,9 +20,9 @@ const services = [
     ),
   },
   {
-    title: "Aplicações Escaláveis",
+    title: "Arquitetura que não te prende",
     description:
-      "Arquitetura moderna e preparada para crescer junto com o seu negócio, garantindo performance e estabilidade.",
+      "Sistema pronto trava quando você cresce. Agência some depois da entrega. Entregamos com código seu, documentação e performance para escalar sem dor de cabeça futura.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -40,9 +40,9 @@ const services = [
     ),
   },
   {
-    title: "Consultoria Técnica",
+    title: "Plano em 3 etapas, sem susto",
     description:
-      "Auxiliamos na definição de requisitos, escolha de tecnologias e planejamento estratégico do seu projeto digital.",
+      "Nada de projeto de 6 meses. 1. Mapeamento em 7 dias 2. MVP funcionando em 30 dias 3. Evolução semanal. Você vê resultado na primeira semana.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -66,12 +66,20 @@ export default function Services() {
     <section id="servicos" className="py-20 lg:py-28 bg-surface">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
-          <h2 className="text-3xl sm:text-4xl font-semibold text-primary mb-4">
-            Soluções que impulsionam seu negócio
+          {/* TOPO DE FUNIL - HISTÓRIA DO VILÃO */}
+          <span className="inline-block mb-4 px-3 py-1 text-xs font-bold tracking-widest uppercase bg-red-50 text-red-600 border border-red-200 rounded-full">
+            O vilão que todo mundo odeia: o sistema engessado
+          </span>
+          <h2 className="text-3xl sm:text-[40px] font-bold tracking-tight text-primary mb-5 leading-[1.1]">
+            Sistema pronto te obriga a mudar seu processo. <br className="hidden sm:block" />
+            A gente faz o contrário.
           </h2>
-          <p className="text-lg text-secondary max-w-2xl mx-auto">
-            Desenvolvimento focado em qualidade, performance e experiência do
-            usuário.
+          <p className="text-lg text-secondary max-w-3xl mx-auto leading-relaxed">
+            Você começa na planilha. Depois contrata um sistema de R$197/mês.
+            Ele não faz do seu jeito, você adapta o time. 6 meses depois seu time
+            voltou pra planilha porque o sistema atrapalha mais do que ajuda.{" "}
+            <span className="font-semibold text-primary">É aí que a Sercil entra:</span> criamos
+            o sistema web que segue 100% o seu processo.
           </p>
         </div>
 
@@ -79,7 +87,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-6 lg:p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+              className="bg-white p-6 lg:p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-zinc-300 transition-all"
             >
               <div className="w-12 h-12 flex items-center justify-center bg-accent/10 text-accent rounded-xl mb-5">
                 {service.icon}
@@ -87,7 +95,7 @@ export default function Services() {
               <h3 className="text-xl font-semibold text-primary mb-3">
                 {service.title}
               </h3>
-              <p className="text-secondary">{service.description}</p>
+              <p className="text-secondary text-[15px] leading-relaxed">{service.description}</p>
             </div>
           ))}
         </div>

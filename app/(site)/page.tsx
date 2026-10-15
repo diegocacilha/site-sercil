@@ -1,15 +1,15 @@
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import Portfolio from "@/components/Portfolio";
-import ContactForm from "@/components/ContactForm";
+import ProductivityStory from "@/components/ProductivityStory";
+import FutureStory from "@/components/FutureStory";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <Services />
-      <Portfolio />
-      <ContactForm />
+      <ProductivityStory />
+      <FutureStory />
     </>
   );
 }

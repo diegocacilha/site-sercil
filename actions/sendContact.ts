@@ -4,9 +4,9 @@
 import nodemailer from "nodemailer";
 
 export interface ContactPayload {
-  name: string;
-  email: string;
-  message?: string;
+  processo: string;
+  como: string;
+  cel: string;
 }
 
 export interface ContactResult {
@@ -17,15 +17,15 @@ export interface ContactResult {
 export async function sendContactEmail(
   payload: ContactPayload
 ): Promise<ContactResult> {
-  const { name, email, message } = payload;
+  const { processo, como, cel } = payload;
 
   // Validação básica
-  if (!name || !email) {
-    return { success: false, message: "Nome e e-mail são obrigatórios." };
+  if (!processo || !como || !cel) {
+    return { success: false, message: "Todos os campos são obrigatórios." };
   }
 
-  if (!process.env.GMAIL_USER || !process.env.GMAIL_PASS) {
-    console.error("Variáveis GMAIL_USER e/ou GMAIL_PASS não configuradas.");
+  if (!process.env.GMAIL_USER || !process.env.GMAIL_PASS || !process.env.GMAIL_EMAIL) {
+    console.error("Variáveis GMAIL_USER e/ou GMAIL_PASS e/ou GMAIL_EMAIL não configuradas.");
     return { success: false, message: "Erro de configuração do servidor." };
   }
 
@@ -41,18 +41,18 @@ export async function sendContactEmail(
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
       to: process.env.GMAIL_USER,
-      replyTo: email,
-      subject: `Novo contato do site: ${name}`,
+      replyTo: process.env.GMAIL_EMAIL,
+      subject: `Novo contato do site: ${cel}`,
       text: `
-        Nome: ${name}
-        E-mail: ${email}
-        Mensagem: ${message || "Nenhuma mensagem enviada."}
+        Nome: ${cel}
+        Processo: ${processo}
+        Como: ${como || "Nenhuma mensagem enviada."}
       `,
       html: `
         <h3>Novo contato do site Sercil</h3>
-        <p><strong>Nome:</strong> ${name}</p>
-        <p><strong>E-mail:</strong> ${email}</p>
-        <p><strong>Mensagem:</strong> ${message || "Nenhuma mensagem enviada."}</p>
+        <p><strong>Cel:</strong> ${cel}</p>
+        <p><strong>Processo:</strong> ${processo}</p>
+        <p><strong>Como:</strong> ${como || "Nenhuma mensagem enviada."}</p>
       `,
     });
 
