@@ -20,3 +20,7 @@
     text-wrap: balance;
   }
 }
+
+html {
+  scrollbar-gutter: stable;
+}

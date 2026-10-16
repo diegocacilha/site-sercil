@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Serviços | Sercil",
+  title: "Sercil | Serviços",
   description:
     "Conheça os serviços da Sercil: desenvolvimento de sistemas web sob medida, portais corporativos, automação de processos e integração com ERP.",
   alternates: {
     canonical: "https://www.sercil.com.br/servicos",
   },
   openGraph: {
-    title: "Serviços | Sercil",
+    title: "Sercil | Serviços",
     description:
       "Soluções digitais sob medida para empresas que buscam eficiência e inovação.",
     url: "https://www.sercil.com.br/servicos",
