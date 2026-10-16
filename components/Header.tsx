@@ -16,9 +16,8 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: "#servicos", label: "Serviços" },
-    { href: "#portfolio", label: "Portfólio" },
-    { href: "#contato", label: "Contato" },
+    { href: "/servicos", label: "Serviços" },
+    { href: "/#contato", label: "Contato" },
   ];
 
   return (
