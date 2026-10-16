@@ -14,9 +14,7 @@ export interface ContactResult {
   message: string;
 }
 
-export async function sendContactEmail(
-  payload: ContactPayload
-): Promise<ContactResult> {
+export async function sendContactEmail(payload: ContactPayload): Promise<ContactResult> {
   const { processo, como, cel } = payload;
 
   // Validação básica
