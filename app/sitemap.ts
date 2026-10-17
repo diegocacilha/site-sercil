@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/politica-de-privacidade`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
+      priority: 0.4,
+    },
+    {
+      url: `${baseUrl}/servicos`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
       priority: 0.7,
     }
   ]
