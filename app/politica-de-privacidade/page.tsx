@@ -9,8 +9,8 @@ export const metadata: Metadata = {
     canonical: "https://www.sercil.com.br/politica-de-privacidade",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
 };
 
