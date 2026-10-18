@@ -63,19 +63,20 @@ export default function FutureStory() {
 
                         <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
                             <div>
-                                <label className="text-xs font-semibold text-zinc-300 uppercase tracking-widest">Qual processo hoje te consome mais tempo?</label>
-                                <select
-                                    value={processo}
-                                    onChange={(e) => setProcesso(e.target.value)}
-                                    className="mt-2 w-full bg-zinc-800 border border-zinc-700 text-white rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-white transition"
-                                >
-                                    <option value="">Selecione...</option>
-                                    <option value="pedidos">Controle de pedidos / OS</option>
-                                    <option value="financeiro">Financeiro e cobrança</option>
-                                    <option value="estoque">Estoque e produção</option>
-                                    <option value="agendamento">Agendamento e atendimento</option>
-                                    <option value="relatorio">Relatórios e integração de sistemas</option>
-                                </select>
+                                <label className="text-xs font-semibold text-zinc-300 uppercase tracking-widest">Qual processo hoje te consome mais tempo?
+                                    <select
+                                        value={processo}
+                                        onChange={(e) => setProcesso(e.target.value)}
+                                        className="mt-2 w-full bg-zinc-800 border border-zinc-700 text-white rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-white transition"
+                                    >
+                                        <option value="">Selecione...</option>
+                                        <option value="pedidos">Controle de pedidos / OS</option>
+                                        <option value="financeiro">Financeiro e cobrança</option>
+                                        <option value="estoque">Estoque e produção</option>
+                                        <option value="agendamento">Agendamento e atendimento</option>
+                                        <option value="relatorio">Relatórios e integração de sistemas</option>
+                                    </select>
+                                </label>
                             </div>
 
                             <div>
@@ -149,12 +150,12 @@ export default function FutureStory() {
                             {/* Conteúdo fake - muda com base no select */}
                             <div className="p-6">
                                 <div className="flex justify-between items-center mb-6">
-                                    <h4 className="font-semibold text-zinc-900">
+                                    <h1 className="font-semibold text-zinc-900">
                                         {processo === "pedidos" ? "Fluxo de Pedidos" :
                                             processo === "financeiro" ? "Relatório Financeiro" :
                                                 processo === "estoque" ? "Controle de Estoque" :
                                                     processo === "agendamento" ? "Agenda do Dia" : "Painel de Produtividade"}
-                                    </h4>
+                                    </h1>
                                     <span className="text-[10px] px-2 py-1 bg-emerald-50 text-emerald-600 rounded-full border border-emerald-100">AO VIVO</span>
                                 </div>
 
