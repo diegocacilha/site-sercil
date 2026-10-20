@@ -5,11 +5,7 @@ import Header from "@/components/Header";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import CookieBanner from "@/components/CookieBanner";
 import Footer from "@/components/Footer";
-<<<<<<< HEAD
 import { SpeedInsights } from '@vercel/speed-insights/next';
-=======
-import { SpeedInsights } from "@vercel/speed-insights/next";
->>>>>>> vercel/install-vercel-speed-insights-mvx1xr
 
 const inter = Inter({
   subsets: ["latin"],
