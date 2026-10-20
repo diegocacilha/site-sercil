@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import CookieBanner from "@/components/CookieBanner";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -107,6 +108,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <CookieBanner />
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
