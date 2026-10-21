@@ -24,3 +24,12 @@
 html {
   scrollbar-gutter: stable;
 }
+
+/* globals.css */
+.section-bg:nth-of-type(even) {
+  background-color: #f9fafb; /* cinza claro — "gray-50" */
+}
+
+.section-bg:nth-of-type(odd) {
+  background-color: #ffffff; /* branco */
+}
