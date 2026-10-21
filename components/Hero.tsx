@@ -1,27 +1,46 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-slate-50 via-white to-blue-50" />
+    <section className="relative overflow-hidden bg-slate-900">
+      {/* Imagem de Fundo Nítida (Estilo Inline para garantir exibição) */}
+      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+        <Image
+          src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop"
+          alt="Ambiente de escritório moderno"
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
+          priority
+        />
+        {/* Gradiente para garantir a leitura do texto à esquerda, mantendo o lado direito da imagem visível */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 50%, rgba(15, 23, 42, 0.2) 100%)',
+            zIndex: 1
+          }}
+        />
+      </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28">
+      {/* Conteúdo - zIndex relativo para ficar acima da imagem */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-green-400 text-sm font-medium mb-8 border border-white/20">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
             </span>
             Software House especializada
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-primary text-balance leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white text-balance leading-tight mb-6">
             Transformamos ideias em{" "}
-            <span className="text-accent">sistemas que geram resultados</span>
+            <span className="text-blue-400">sistemas que geram resultados</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-secondary max-w-2xl mb-10 text-balance">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-10 text-balance">
             Desenvolvimento de aplicações web sob medida para empresas que
             buscam eficiência, escalabilidade e uma presença digital robusta.
           </p>
@@ -29,7 +48,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="#contato"
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-colors shadow-sm"
+              className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-500 transition-colors shadow-lg"
             >
               Solicitar orçamento
               <svg
@@ -48,28 +67,28 @@ export default function Hero() {
             </Link>
             <Link
               href="#portfolio"
-              className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary font-medium rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-surface transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white font-medium rounded-lg border border-white/20 hover:bg-white/20 backdrop-blur-md transition-colors"
             >
               Conheça nosso trabalho
             </Link>
           </div>
         </div>
-      </div>
 
-      {/* Stats */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-20 lg:pb-28">
-        <div className="flex flex-wrap gap-8 sm:gap-12">
-          <div>
-            <div className="text-3xl font-semibold text-primary">5+</div>
-            <div className="text-sm text-muted">anos de experiência</div>
-          </div>
-          <div>
-            <div className="text-3xl font-semibold text-primary">20+</div>
-            <div className="text-sm text-muted">projetos entregues</div>
-          </div>
-          <div>
-            <div className="text-3xl font-semibold text-primary">100%</div>
-            <div className="text-sm text-muted">clientes satisfeitos</div>
+        {/* Stats */}
+        <div className="mt-16 lg:mt-24 max-w-2xl">
+          <div className="flex flex-wrap gap-8 sm:gap-12 bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl">
+            <div>
+              <div className="text-3xl font-semibold text-white">5+</div>
+              <div className="text-sm text-gray-400">anos de experiência</div>
+            </div>
+            <div>
+              <div className="text-3xl font-semibold text-white">20+</div>
+              <div className="text-sm text-gray-400">projetos entregues</div>
+            </div>
+            <div>
+              <div className="text-3xl font-semibold text-white">100%</div>
+              <div className="text-sm text-gray-400">clientes satisfeitos</div>
+            </div>
           </div>
         </div>
       </div>
