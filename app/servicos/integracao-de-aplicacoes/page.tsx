@@ -1,4 +1,5 @@
 import Metodologia from "@/components/Metodologia";
+import Tecnologias from "@/components/Tecnologias";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -169,22 +170,7 @@ export default function IntegracaoDeAplicacoesPage() {
 
       <Metodologia />
 
-      {/* Tecnologias */}
-      <section className="bg-gray-900 py-16 text-white">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold">Padrões e protocolos de mercado</h2>
-          <p className="mt-2 text-gray-400">
-            Trabalhamos com as principais tecnologias e protocolos de comunicação do mercado.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm font-medium text-gray-300">
-            {["REST APIs", "GraphQL", "Webhooks", "SOAP", "OAuth 2.0", "Node.js", "Python", "Kafka"].map((tech) => (
-              <span key={tech} className="rounded-full border border-gray-700 bg-gray-800 px-4 py-2">
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Tecnologias />
 
       {/* CTA Final */}
       <section id="contato" className="section-bg w-full py-20 text-center">
