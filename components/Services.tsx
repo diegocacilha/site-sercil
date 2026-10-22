@@ -1,8 +1,10 @@
 const services = [
   {
-    title: "Sistema que segue SEU processo",
+    chapter: "Capítulo 1",
+    title: "Diagnóstico do processo antes do código",
     description:
-      "Chega de se adaptar a sistema engessado de R$197/mês. A gente mapeia como você já trabalha no Excel/WhatsApp e automatiza exatamente do seu jeito. Sem mudar seu time.",
+      "Mapeamos a automação de processos que sua empresa já faz no WhatsApp, planilha e ERP. Em 7 dias você tem clareza de onde o processo trava — e um plano de digitalização de processos sob medida, sem mudar a rotina do time.",
+    outcome: "Resultado: você sai do caos e enxerga o gargalo do controle operacional.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -14,15 +16,17 @@ const services = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
-          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"
         />
       </svg>
     ),
   },
   {
-    title: "Arquitetura que não te prende",
+    chapter: "Capítulo 2",
+    title: "Sistema web sob medida no ar em 30 dias",
     description:
-      "Sistema pronto trava quando você cresce. Agência some depois da entrega. Entregamos com código seu, documentação e performance para escalar sem dor de cabeça futura.",
+      "Construímos o primeiro módulo do seu sistema personalizado para empresas em até 30 dias — com integração de sistemas, integração com ERP, WhatsApp e planilhas, além de painel administrativo e portal corporativo para clientes e parceiros, conforme o seu fluxo real.",
+    outcome: "Resultado: produtividade de volta na primeira semana.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -40,9 +44,11 @@ const services = [
     ),
   },
   {
-    title: "Plano em 3 etapas, sem susto",
+    chapter: "Capítulo 3",
+    title: "Evolução semanal — e o código é seu",
     description:
-      "Nada de projeto de 6 meses. 1. Mapeamento em 7 dias 2. MVP funcionando em 30 dias 3. Evolução semanal. Você vê resultado na primeira semana.",
+      "Cada semana entregamos melhoria com base no uso real. Você recebe dashboards corporativos, relatórios gerenciais, o código-fonte, a documentação e uma arquitetura de software sob medida preparada para escalar. Se amanhã quiser tocar sozinho ou trocar de parceiro, nada te prende.",
+    outcome: "Resultado: de operador para dono de novo.",
     icon: (
       <svg
         className="w-6 h-6"
@@ -54,7 +60,7 @@ const services = [
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}
-          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
         />
       </svg>
     ),
@@ -66,20 +72,26 @@ export default function Services() {
     <section id="servicos" className="py-20 lg:py-28 bg-surface">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
-          {/* TOPO DE FUNIL - HISTÓRIA DO VILÃO */}
+          {/* VILÃO ÚNICO — conecta com a seção "Por que existimos" do site */}
           <span className="inline-block mb-4 px-3 py-1 text-xs font-bold tracking-widest uppercase bg-red-50 text-red-600 border border-red-200 rounded-full">
-            O vilão que todo mundo odeia: o sistema engessado
+            O problema não é você. É o Frankenstein que montaram na sua operação.
           </span>
           <h2 className="text-3xl sm:text-[40px] font-bold tracking-tight text-primary mb-5 leading-[1.1]">
-            Sistema pronto te obriga a mudar seu processo. <br className="hidden sm:block" />
-            A gente faz o contrário.
+            WhatsApp para vender. Planilha para controlar.{" "}
+            <br className="hidden sm:block" />
+            ERP que ninguém integra.
           </h2>
           <p className="text-lg text-secondary max-w-3xl mx-auto leading-relaxed">
-            Você começa na planilha. Depois contrata um sistema de R$197/mês.
-            Ele não faz do seu jeito, você adapta o time. 6 meses depois seu time
-            voltou pra planilha porque o sistema atrapalha mais do que ajuda.{" "}
-            <span className="font-semibold text-primary">É aí que a Sercil entra:</span> criamos
-            o sistema web que segue 100% o seu processo.
+            Você cresceu, mas a automação de processos não acompanhou. A operação virou
+            um quebra-cabeça de ferramentas que não conversam entre si — e o dono
+            virou o único ponto de integração.{" "}
+            <span className="font-semibold text-primary">
+              A Sercil desenvolve sistemas web sob medida que substituem o
+              Frankenstein por um sistema web integrado com o seu ERP e o seu
+              processo.
+            </span>{" "}
+            Em 3 capítulos, você sai do caos do controle operacional e volta a
+            ser dono do negócio.
           </p>
         </div>
 
@@ -87,15 +99,23 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-6 lg:p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-zinc-300 transition-all"
+              className="bg-white p-6 lg:p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-zinc-300 transition-all flex flex-col"
             >
+              <span className="text-[11px] font-bold tracking-widest uppercase text-accent mb-4">
+                {service.chapter}
+              </span>
               <div className="w-12 h-12 flex items-center justify-center bg-accent/10 text-accent rounded-xl mb-5">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold text-primary mb-3">
                 {service.title}
               </h3>
-              <p className="text-secondary text-[15px] leading-relaxed">{service.description}</p>
+              <p className="text-secondary text-[15px] leading-relaxed mb-4">
+                {service.description}
+              </p>
+              <p className="text-[14px] font-medium text-primary mt-auto pt-4 border-t border-gray-100">
+                {service.outcome}
+              </p>
             </div>
           ))}
         </div>
