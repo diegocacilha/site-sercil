@@ -69,7 +69,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicos" className="py-20 lg:py-28 bg-surface">
+    <section id="servicos" className="section-bg py-20 lg:py-28 bg-surface">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-14">
           {/* VILÃO ÚNICO — conecta com a seção "Por que existimos" do site */}

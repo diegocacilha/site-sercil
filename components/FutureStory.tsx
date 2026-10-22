@@ -41,7 +41,7 @@ export default function FutureStory() {
     }
 
     return (
-        <section id="contato" className="py-20 lg:py-28 bg-white">
+        <section id="contato" className="section-bg py-20 lg:py-28 bg-white">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center bg-zinc-900 rounded-[32px] p-8 lg:p-12 overflow-hidden relative">

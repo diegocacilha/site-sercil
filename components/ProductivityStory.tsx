@@ -1,7 +1,7 @@
 // components/ProductivityStory.tsx - Meio de funil Sercil
 export default function ProductivityStory() {
   return (
-    <section className="py-20 lg:py-28 bg-zinc-50">
+    <section className="section-bg py-20 lg:py-28 bg-zinc-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
