@@ -46,11 +46,8 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="#contato"
-              className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-500 transition-colors shadow-lg"
-            >
-              Solicitar orçamento
+            <Link href="/servicos" className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-500 transition-colors shadow-lg"            >
+              Nossos Serviços
               <svg
                 className="ml-2 w-4 h-4"
                 fill="none"
@@ -66,10 +63,10 @@ export default function Hero() {
               </svg>
             </Link>
             <Link
-              href="#portfolio"
+              href="#contato"
               className="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white font-medium rounded-lg border border-white/20 hover:bg-white/20 backdrop-blur-md transition-colors"
             >
-              Conheça nosso trabalho
+              Entrar em Contato
             </Link>
           </div>
         </div>
