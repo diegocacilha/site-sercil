@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Integração Entre Aplicações | Sercil",
+  title: "Sercil | Integração Entre Aplicações",
   description: "Conecte seus sistemas, ERPs, CRMs e APIs. Elimine silos de informação e garanta que os dados fluam de forma automática e segura entre todas as suas ferramentas.",
   alternates: {
     canonical: "https://www.sercil.com.br/servicos/integracao-entre-aplicacoes",

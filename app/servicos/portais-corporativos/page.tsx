@@ -4,7 +4,7 @@ import Metodologia from "@/components/Metodologia";
 import Tecnologias from "@/components/Tecnologias";
 
 export const metadata: Metadata = {
-  title: "Portais Corporativos | Sercil",
+  title: "Sercil | Portais Corporativos",
   description:
     "Desenvolvimento de portais corporativos para clientes, parceiros e colaboradores, com autenticação, permissões e integrações. Centralize a comunicação e os processos da sua organização.",
   alternates: {

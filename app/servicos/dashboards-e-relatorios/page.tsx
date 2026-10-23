@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Dashboards e Relatórios | Sercil",
+  title: "Sercil | Dashboards e Relatórios",
   description: "Transforme dados em decisões. Criamos dashboards interativos e relatórios automatizados para você visualizar os indicadores do seu negócio em tempo real.",
   alternates: {
     canonical: "https://www.sercil.com.br/servicos/dashboards-e-relatorios",

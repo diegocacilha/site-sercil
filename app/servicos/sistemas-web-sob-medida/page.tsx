@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Sistemas Web Sob Medida | Sercil",
+  title: "Sercil | Sistemas Web Sob Medida",
   description: "Desenvolvimento de sistemas web personalizados para automatizar processos, reduzir custos e escalar o seu negócio. Conheça nossa metodologia.",
   alternates: {
     canonical: "https://www.sercil.com.br/servicos/sistemas-web-sob-medida",
