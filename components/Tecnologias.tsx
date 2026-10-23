@@ -1,3 +1,4 @@
+"use client";
 export default function Tecnologias() {
     return (
         <section className="bg-gray-900 py-16 text-white">

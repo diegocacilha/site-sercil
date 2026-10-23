@@ -76,6 +76,7 @@ export default function ServicosPage() {
             fill
             className="object-cover"
             priority
+            sizes="(max-width: 1280px) 100vw, 1280px"
           />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
@@ -110,6 +111,7 @@ export default function ServicosPage() {
                     alt={servico.titulo}
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
                 

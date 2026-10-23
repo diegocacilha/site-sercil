@@ -1,3 +1,4 @@
+"use client";
 // components/ProductivityStory.tsx - Meio de funil Sercil
 export default function ProductivityStory() {
   return (

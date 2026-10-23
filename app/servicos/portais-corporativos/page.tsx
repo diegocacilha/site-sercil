@@ -24,6 +24,7 @@ export default function PortaisCorporativosPage() {
             fill
             className="object-cover"
             priority
+            sizes="(max-width: 1280px) 100vw, 1280px"
           />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
@@ -103,6 +104,7 @@ export default function PortaisCorporativosPage() {
                 alt="Equipe corporativa reunida em torno de uma mesa discutindo estratégias"
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div>

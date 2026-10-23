@@ -1,3 +1,4 @@
+"use client";
 const services = [
   {
     chapter: "Capítulo 1",
