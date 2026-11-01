@@ -1,0 +1,257 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Diego Armando Cacilha",
+    "label": "Desenvolvedor Full Stack | Analista de Sistemas",
+    "image": "",
+    "email": "cacilha.tec@gmail.com",
+    "phone": "",
+    "url": "https://www.sercil.com.br",
+    "summary": "Profissional de Tecnologia da Informação com mais de 10 anos de experiência em análise e desenvolvimento de sistemas, suporte técnico, sustentação de aplicações e manutenção de sistemas legados. Experiência no atendimento a clientes internos e externos, suporte a usuários de sistemas ERP, implementação de customizações e integração entre sistemas. Conhecimentos em Node.js, JavaScript, AngularJS e LSP, além de experiência com sistemas Senior/Sapiens, desenvolvimento de relatórios, webservices e regras de negócio. Trajetória em ambientes industriais, sistemas de gestão empresarial e plataformas de educação a distância. Atuação na identificação e correção de falhas, manutenção de aplicações e implementação de melhorias em sistemas e processos.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Blumenau",
+      "countryCode": "BR",
+      "region": "SC"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "diegocacilha",
+        "url": "https://www.linkedin.com/in/diegocacilha"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Juréia Alimentos",
+      "position": "Analista de Sistemas Sênior",
+      "url": "",
+      "startDate": "2023-01-01",
+      "endDate": "2023-12-31",
+      "summary": "Atuação no suporte ao ERP Sapiens, manutenção de rotinas customizadas em LSP e integração entre sistemas.",
+      "highlights": [
+        "Atendimento aos clientes internos e suporte aos usuários do sistema ERP Sapiens.",
+        "Manutenção e implantação de rotinas customizadas utilizando a linguagem LSP, da Senior Sistemas.",
+        "Consultoria em sistemas de informação, apoiando demandas relacionadas às soluções corporativas.",
+        "Integração entre diferentes sistemas, contribuindo para a comunicação entre aplicações.",
+        "Apoio a demandas relacionadas a contratos de Tecnologia da Informação.",
+        "Contribuição para a continuidade operacional do ERP Sapiens por meio do suporte aos usuários e da manutenção de rotinas customizadas.",
+        "Apoio à integração de sistemas e à adequação das soluções tecnológicas às necessidades internas da empresa."
+      ]
+    },
+    {
+      "name": "Prestação de serviços em Tecnologia da Informação",
+      "position": "Analista de Sistemas Sênior | Sustentação de Sistema Customizado",
+      "url": "",
+      "startDate": "2022-01-01",
+      "endDate": "2023-12-31",
+      "summary": "Sustentação de sistemas web, desenvolvimento com PHP e Node.js e manutenção de sistemas legados.",
+      "highlights": [
+        "Sustentação e manutenção de sistemas web.",
+        "Desenvolvimento de aplicações web utilizando PHP e Node.js.",
+        "Atendimento e suporte técnico a clientes internos e externos.",
+        "Manutenção de sistemas legados.",
+        "Implementação de melhorias e correção de falhas em sistemas ERP Sapiens.",
+        "Contribuição para a continuidade operacional das aplicações por meio da sustentação de sistemas web e da manutenção de sistemas legados.",
+        "Aprimoramento de aplicações existentes mediante correção de falhas e implementação de melhorias no ERP Sapiens."
+      ]
+    },
+    {
+      "name": "Mouts TI",
+      "position": "Analista de Suporte | Desenvolvedor PHP",
+      "url": "",
+      "startDate": "2022-01-01",
+      "endDate": "2022-12-31",
+      "summary": "Suporte técnico a clientes externos, manutenção de sistemas legados e desenvolvimento com PHP, Laravel e JavaScript.",
+      "highlights": [
+        "Atendimento e suporte técnico aos clientes externos.",
+        "Auxílio a usuários na resolução de problemas relacionados aos sistemas.",
+        "Manutenção de sistemas legados.",
+        "Implementação de melhorias e correção de falhas em aplicações desenvolvidas com PHP e Laravel.",
+        "Desenvolvimento e manutenção de funcionalidades utilizando JavaScript no front-end e no back-end.",
+        "Contribuição para a manutenção e o funcionamento das aplicações por meio do suporte técnico e da correção de falhas.",
+        "Apoio à evolução dos sistemas mediante melhorias e manutenção de aplicações desenvolvidas em PHP, Laravel e JavaScript."
+      ]
+    },
+    {
+      "name": "Altenburg",
+      "position": "Analista de Suporte Nível II",
+      "url": "",
+      "startDate": "2021-01-01",
+      "endDate": "2022-12-31",
+      "summary": "Suporte a sistemas corporativos, desenvolvimento no ERP Senior e análise de processos fabris.",
+      "highlights": [
+        "Suporte aos clientes internos, atendendo às demandas relacionadas aos sistemas corporativos.",
+        "Desenvolvimento e manutenção de triggers, stored procedures e functions.",
+        "Desenvolvimento e manutenção de telas customizadas, relatórios e webservices no ERP Senior.",
+        "Implementação e manutenção de regras por eventos no sistema ERP.",
+        "Análise de processos fabris e implementação de customizações voltadas à melhoria e à eficiência dos processos da fábrica e da qualidade.",
+        "Contribuição para a adequação do ERP Senior às necessidades dos processos fabris por meio do desenvolvimento e da manutenção de funcionalidades customizadas.",
+        "Apoio à melhoria dos processos operacionais e da qualidade por meio da análise de processos e da implementação de soluções nos sistemas."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Instituto Federal Catarinense (IFC)",
+      "url": "",
+      "area": "Análise e Desenvolvimento de Sistemas",
+      "studyType": "Curso Superior",
+      "startDate": "",
+      "endDate": "",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "SENAI",
+      "url": "",
+      "area": "Redes de Computadores",
+      "studyType": "Curso Técnico",
+      "startDate": "2009-01-01",
+      "endDate": "2010-12-31",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Análise e Sustentação de Sistemas",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Desenvolvimento Web",
+      "level": "",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Node.js",
+      "level": "",
+      "keywords": ["Express", "APIs REST"]
+    },
+    {
+      "name": "JavaScript",
+      "level": "",
+      "keywords": ["Front-end", "Back-end"]
+    },
+    {
+      "name": "TypeScript",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "AngularJS",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "PHP",
+      "level": "",
+      "keywords": ["Laravel"]
+    },
+    {
+      "name": "Laravel",
+      "level": "",
+      "keywords": []
+    },
+    {
+      "name": "Sistemas ERP Senior/Sapiens",
+      "level": "",
+      "keywords": ["LSP", "Relatórios customizados", "Webservices"]
+    },
+    {
+      "name": "Integração de Sistemas",
+      "level": "",
+      "keywords": ["APIs REST", "Webservices"]
+    },
+    {
+      "name": "Banco de dados relacional",
+      "level": "",
+      "keywords": ["Triggers", "Stored Procedures", "Functions"]
+    },
+    {
+      "name": "Banco de dados NoSQL",
+      "level": "",
+      "keywords": ["MongoDB"]
+    },
+    {
+      "name": "Versionamento de código",
+      "level": "",
+      "keywords": ["Git"]
+    },
+    {
+      "name": "Metodologias ágeis",
+      "level": "",
+      "keywords": ["Scrum", "Kanban"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Inglês",
+      "fluency": "Básico"
+    },
+    {
+      "language": "Português",
+      "fluency": "Nativo"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Design Responsivo com Bootstrap",
+      "date": "",
+      "issuer": "Clarify",
+      "url": ""
+    },
+    {
+      "name": "Entra21",
+      "date": "",
+      "issuer": "Blusoft",
+      "url": ""
+    },
+    {
+      "name": "Node.js: Inovando com JavaScript no Backend",
+      "date": "",
+      "issuer": "Alura",
+      "url": ""
+    },
+    {
+      "name": "UX: O Que é Experiência de Usuário",
+      "date": "",
+      "issuer": "Alura",
+      "url": ""
+    },
+    {
+      "name": "MongoDB: Uma Alternativa aos Bancos Relacionais Tradicionais",
+      "date": "",
+      "issuer": "Alura",
+      "url": ""
+    },
+    {
+      "name": "TypeScript Parte 1: Evoluindo seu JavaScript",
+      "date": "",
+      "issuer": "Alura",
+      "url": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "Sercil",
+      "description": "Desenvolvimento de soluções web e aplicações. Site pessoal com currículo estruturado em JSON e perfil acessível por agentes de IA.",
+      "highlights": [],
+      "keywords": ["Node.js", "Next.js", "TypeScript", "JSON Resume"],
+      "startDate": "",
+      "endDate": "",
+      "url": "https://www.sercil.com.br",
+      "roles": ["Desenvolvedor Full Stack"],
+      "entity": "",
+      "type": "application"
+    }
+  ],
+  "meta": {
+    "canonical": "https://www.sercil.com.br/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2026-11-01T00:00:00Z"
+  }
+}

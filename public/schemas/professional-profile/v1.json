@@ -1,0 +1,336 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.sercil.com.br/schemas/professional-profile/v1.json",
+  "title": "Professional Profile",
+  "description": "Schema para perfil profissional enriquecido, acessível por agentes de IA. Estende conceitos do JSON Resume com preferências profissionais, níveis de competência, verificação e dicas de uso por IA.",
+  "type": "object",
+  "version": "1.0.0",
+  "required": [
+    "schemaVersion",
+    "lastUpdated",
+    "canonicalUrl",
+    "identity",
+    "professionalProfile",
+    "skills",
+    "experience",
+    "education",
+    "privacy"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL do schema que valida este documento."
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Versão semântica do schema do perfil."
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Data e hora da última atualização do perfil (ISO 8601)."
+    },
+    "canonicalUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL canônica deste perfil."
+    },
+    "resumeUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL do currículo no padrão JSON Resume."
+    },
+    "humanReadableUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL da versão legível por humanos (página HTML)."
+    },
+
+    "identity": {
+      "type": "object",
+      "required": ["id", "name", "headline", "summary", "location", "contact", "languages"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "format": "uri",
+          "description": "Identificador único (ex.: URL com fragmento #person)."
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "preferredName": { "type": "string" },
+        "headline": { "type": "string", "minLength": 1 },
+        "summary": { "type": "string", "minLength": 1 },
+        "location": {
+          "type": "object",
+          "required": ["city", "countryCode"],
+          "additionalProperties": false,
+          "properties": {
+            "city": { "type": "string" },
+            "region": { "type": "string" },
+            "countryCode": { "type": "string", "pattern": "^[A-Z]{2}$" },
+            "timezone": { "type": "string" },
+            "remoteFriendly": { "type": "boolean" }
+          }
+        },
+        "contact": {
+          "type": "object",
+          "required": ["email"],
+          "additionalProperties": false,
+          "properties": {
+            "email": { "type": "string", "format": "email" },
+            "phone": { "type": "string" },
+            "linkedin": { "type": "string", "format": "uri" },
+            "github": { "type": "string", "format": "uri" },
+            "website": { "type": "string", "format": "uri" }
+          }
+        },
+        "languages": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["language", "level"],
+            "additionalProperties": false,
+            "properties": {
+              "language": { "type": "string" },
+              "level": {
+                "type": "string",
+                "enum": ["native", "fluent", "advanced", "intermediate", "basic"]
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "professionalProfile": {
+      "type": "object",
+      "required": ["workModel", "employmentTypes", "areas", "interests", "availability"],
+      "additionalProperties": false,
+      "properties": {
+        "workModel": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["remote", "hybrid", "onsite"] },
+          "uniqueItems": true
+        },
+        "employmentTypes": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["full-time", "part-time", "contract", "pj", "freelance", "internship"] },
+          "uniqueItems": true
+        },
+        "seniority": {
+          "type": "string",
+          "enum": ["intern", "junior", "mid", "senior", "lead", "principal"]
+        },
+        "yearsOfExperience": { "type": "integer", "minimum": 0 },
+        "areas": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "interests": {
+          "type": "array",
+          "items": { "type": "string" },
+          "uniqueItems": true
+        },
+        "availability": {
+          "type": "object",
+          "required": ["status"],
+          "additionalProperties": false,
+          "properties": {
+            "status": {
+              "type": "string",
+              "enum": ["open_to_opportunities", "not_looking", "open_to_contracts_only"]
+            },
+            "noticePeriod": { "type": "string" },
+            "willingToRelocate": { "type": "boolean" }
+          }
+        },
+        "salaryExpectation": {
+          "type": "object",
+          "required": ["disclosed"],
+          "additionalProperties": false,
+          "properties": {
+            "disclosed": { "type": "boolean" },
+            "min": { "type": "number", "minimum": 0 },
+            "max": { "type": "number", "minimum": 0 },
+            "currency": { "type": "string", "pattern": "^[A-Z]{3}$" },
+            "period": { "type": "string", "enum": ["monthly", "yearly", "hourly"] },
+            "note": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "category", "level"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "category": {
+            "type": "string",
+            "enum": [
+              "language",
+              "backend",
+              "frontend",
+              "database",
+              "erp",
+              "integration",
+              "tooling",
+              "methodology",
+              "analysis",
+              "soft-skill",
+              "other"
+            ]
+          },
+          "level": {
+            "type": "string",
+            "enum": ["beginner", "intermediate", "advanced", "expert"]
+          },
+          "yearsOfExperience": { "type": "integer", "minimum": 0 },
+          "keywords": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["company", "role", "startDate", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "company": { "type": "string", "minLength": 1 },
+          "role": { "type": "string", "minLength": 1 },
+          "startDate": { "type": "string", "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$" },
+          "endDate": { "type": "string", "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$" },
+          "location": { "type": "string" },
+          "workModel": { "type": "string", "enum": ["remote", "hybrid", "onsite"] },
+          "description": { "type": "string" },
+          "highlights": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "technologies": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["institution", "area", "studyType", "status"],
+        "additionalProperties": false,
+        "properties": {
+          "institution": { "type": "string", "minLength": 1 },
+          "area": { "type": "string", "minLength": 1 },
+          "studyType": { "type": "string" },
+          "startDate": { "type": "string", "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$" },
+          "endDate": { "type": "string", "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$" },
+          "status": { "type": "string", "enum": ["completed", "incomplete", "in_progress"] },
+          "note": { "type": "string" }
+        }
+      }
+    },
+
+    "certificates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "issuer"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "issuer": { "type": "string", "minLength": 1 },
+          "date": { "type": "string", "pattern": "^\\d{4}(-\\d{2})?(-\\d{2})?$" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+
+    "projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "url": { "type": "string", "format": "uri" },
+          "description": { "type": "string" },
+          "role": { "type": "string" },
+          "technologies": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+          },
+          "status": { "type": "string", "enum": ["active", "archived", "paused", "concept"] }
+        }
+      }
+    },
+
+    "verification": {
+      "type": "object",
+      "required": ["declaredBy"],
+      "additionalProperties": false,
+      "properties": {
+        "declaredBy": { "type": "string", "enum": ["self", "third-party", "mixed"] },
+        "verifiedFields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "note": { "type": "string" },
+        "contactForVerification": { "type": "string", "format": "email" }
+      }
+    },
+
+    "aiHints": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "preferredUse": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "disallowedUse": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "contactPolicy": { "type": "string" }
+      }
+    },
+
+    "privacy": {
+      "type": "object",
+      "required": ["publicFields", "withheldFields"],
+      "additionalProperties": false,
+      "properties": {
+        "publicFields": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "withheldFields": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "note": { "type": "string" }
+      }
+    }
+  }
+}

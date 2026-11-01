@@ -1,0 +1,49 @@
+# Sercil — Diego Armando Cacilha
+
+> Site pessoal e profissional de Diego Armando Cacilha, Desenvolvedor Full Stack e Analista de Sistemas com mais de 10 anos de experiência em análise e desenvolvimento de sistemas, sustentação de aplicações, suporte técnico e manutenção de sistemas legados. Este site disponibiliza o currículo em formato humano (HTML), estruturado (JSON Resume) e enriquecido para agentes de IA (perfil profissional com preferências, competências e disponibilidade).
+
+Este arquivo (`llms.txt`) orienta agentes de IA sobre os recursos públicos disponíveis, seus propósitos e as políticas de uso. Todos os recursos listados são públicos, sem autenticação, e retornam HTTP 200.
+
+## Recursos principais
+
+- [Currículo (HTML)](https://www.sercil.com.br/curriculo): versão legível por humanos, com resumo profissional, competências, experiências, formação, cursos, idioma e carta de apresentação. Inclui dados estruturados JSON-LD (`ProfilePage` + `Person`) no HTML.
+
+- [Currículo (JSON Resume)](https://www.sercil.com.br/resume.json): currículo estruturado no padrão JSON Resume v1.0.0. Indicado para importação por sistemas de recrutamento (ATS), ferramentas de RH e agentes que precisam de uma representação padronizada da trajetória profissional.
+
+- [Perfil profissional para IA](https://www.sercil.com.br/api/profile): perfil enriquecido, com identidade, preferências profissionais (modelo de trabalho, tipos de contrato, áreas de interesse), competências com nível e anos de experiência, experiências detalhadas, formação, certificados, projetos, metadados de verificação, dicas de uso por IA e política de privacidade. É o recurso mais completo para avaliação de compatibilidade com vagas.
+
+- [Schema do perfil profissional](https://www.sercil.com.br/schemas/professional-profile/v1.json): JSON Schema (draft 2020-12) que valida o recurso `/api/profile`. Útil para agentes que desejam validar ou interpretar o perfil com segurança.
+
+## Recursos complementares
+
+- [Página inicial](https://www.sercil.com.br): apresentação do site e links para os recursos acima.
+- [LinkedIn](https://www.linkedin.com/in/diegocacilha): perfil profissional na rede LinkedIn.
+
+## Quando usar cada recurso
+
+- **Para leitura humana ou resumo em linguagem natural**: use `/curriculo`.
+- **Para importação em ATS ou sistemas que seguem JSON Resume**: use `/resume.json`.
+- **Para avaliar compatibilidade com vagas, competências, preferências e disponibilidade**: use `/api/profile`.
+- **Para validar a estrutura do perfil antes de consumi-lo**: use `/schemas/professional-profile/v1.json`.
+
+## Ordem de preferência
+
+1. `/api/profile` — visão mais completa e adequada para agentes de IA.
+2. `/resume.json` — visão padronizada e interoperável.
+3. `/curriculo` — visão humana, com JSON-LD embutido.
+
+## Política de uso
+
+- Os recursos são públicos e podem ser consultados por agentes de IA para fins de avaliação de oportunidades profissionais, pesquisa e interoperabilidade.
+- **Não** use os dados para tomada de decisão automatizada sem supervisão humana.
+- **Não** use os dados para contato comercial não solicitado.
+- Contato profissional deve ocorrer por e-mail (`cacilha.tec@gmail.com`) ou LinkedIn, com contexto claro da oportunidade.
+- Dados sensíveis (telefone, endereço completo, documentos) não são expostos publicamente.
+
+## Metadados
+
+- Última atualização do perfil: 2026-11-01
+- Versão do schema do perfil: 1.0.0
+- Padrão do currículo: JSON Resume v1.0.0
+- Idioma principal: Português (Brasil)
+- Localização: Blumenau, Santa Catarina, Brasil
