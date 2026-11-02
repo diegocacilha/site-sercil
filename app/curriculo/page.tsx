@@ -320,57 +320,6 @@ export default function CurriculoPage() {
           <li>Inglês – Básico.</li>
         </ul>
       </section>
-
-      {/* Carta de apresentação */}
-      <section className="mt-8 border-t border-gray-200 pt-6">
-        <h2 className="text-xl font-semibold text-gray-900">
-          Carta de Apresentação
-        </h2>
-        <div className="mt-2 space-y-3 leading-relaxed text-gray-700">
-          <p>
-            Sou profissional de Tecnologia da Informação, com mais de 10 anos de
-            experiência em análise e desenvolvimento de sistemas, sustentação de
-            aplicações, suporte técnico e manutenção de sistemas legados. Ao
-            longo da minha trajetória, atuei em ambientes corporativos e
-            industriais, contribuindo para a continuidade operacional dos
-            sistemas, a resolução de problemas técnicos e a implementação de
-            melhorias nas aplicações e nos processos de negócio.
-          </p>
-          <p>
-            Possuo conhecimentos em desenvolvimento web com Node.js,
-            JavaScript, PHP, Laravel e AngularJS, além de experiência com
-            sistemas ERP Senior/Sapiens, linguagem LSP, desenvolvimento de APIs
-            REST, webservices, relatórios customizados e integração entre
-            sistemas. Tenho também conhecimentos em bancos de dados relacionais
-            e NoSQL, incluindo triggers, stored procedures e functions, além de
-            familiaridade com metodologias ágeis, como Scrum e Kanban, e
-            ferramentas de versionamento de código.
-          </p>
-          <p>
-            Minha experiência profissional inclui suporte a usuários internos e
-            externos, análise e correção de falhas, manutenção de aplicações,
-            sustentação de sistemas customizados e desenvolvimento de
-            funcionalidades alinhadas às necessidades do negócio. Sou um
-            profissional analítico, comprometido com a qualidade das entregas e
-            orientado à resolução de problemas, buscando desenvolver soluções
-            tecnológicas eficientes, seguras e capazes de agregar valor às
-            operações.
-          </p>
-          <p>
-            Busco uma oportunidade como Desenvolvedor Full Stack para aplicar
-            meus conhecimentos técnicos, ampliar minha atuação no desenvolvimento
-            de soluções web e contribuir para a evolução de sistemas, a
-            integração de tecnologias e a melhoria contínua dos processos,
-            colaborando com equipes multidisciplinares e com os objetivos
-            estratégicos da organização.
-          </p>
-          <p className="pt-2 font-medium text-gray-800">
-            Atenciosamente,
-            <br />
-            Diego Armando Cacilha
-          </p>
-        </div>
-      </section>
     </main>
   );
 }
