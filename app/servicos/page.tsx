@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Sercil | Serviços",
@@ -97,6 +98,27 @@ export default function ServicosPage() {
       {/* Grid de Serviços */}
       <section className="section-bg w-full py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Link voltar para o início */}
+          <Link
+            href="/"
+            className="inline-flex items-center text-sm text-muted hover:text-accent transition-colors mb-8"
+          >
+            <svg
+              className="w-4 h-4 mr-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            Voltar para o início
+          </Link>
+
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {servicos.map((servico) => (
               <a
