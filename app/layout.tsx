@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sercil | Desenvolvimento de Sistemas Sob Medida",
+  title: "Desenvolvimento de Sistemas Sob Medida | Sercil",
   description:
     "Transforme sua operação com sistemas web personalizados. A Sercil desenvolve soluções escaláveis, seguras e focadas em resultados para o seu negócio.",
   alternates: {
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Sercil" }],
   openGraph: {
-    title: "Sercil | Software House Especializada em Sistemas Web",
+    title: "Desenvolvimento de Sistemas Sob Medida | Sercil",
     description:
       "Soluções digitais sob medida para empresas que buscam eficiência e inovação.",
     type: "website",

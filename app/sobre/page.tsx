@@ -3,18 +3,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Sercil | Sobre",
+  title: "Sobre | Sercil",
   description:
     "Conheça a Sercil: software house especializada em sistemas web sob medida, integração com ERP, WhatsApp e planilhas. Fundada por Diego, profissional com mais de 10 anos de experiência em TI.",
   alternates: {
     canonical: "https://www.sercil.com.br/sobre",
   },
   openGraph: {
-    title: "Sercil | Sobre",
+    title: "Sobre | Sercil",
     description:
       "Software house especializada em sistemas web sob medida. Fundada por Diego, profissional com mais de 10 anos de experiência em TI.",
     url: "https://www.sercil.com.br/sobre",
     type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

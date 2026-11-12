@@ -16,7 +16,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "Sercil",
-  }
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function IntegracaoDeAplicacoesPage() {

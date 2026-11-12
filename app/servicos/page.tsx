@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     siteName: "Sercil",
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const servicos = [
