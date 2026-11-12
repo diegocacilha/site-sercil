@@ -4,11 +4,20 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Sercil | Sistemas Web Sob Medida",
+  title: "Sistemas Web Sob Medida | Sercil",
   description: "Desenvolvimento de sistemas web personalizados para automatizar processos, reduzir custos e escalar o seu negócio. Conheça nossa metodologia.",
   alternates: {
     canonical: "https://www.sercil.com.br/servicos/sistemas-web-sob-medida",
   },
+  openGraph: {
+    title: "Sistemas Web Sob Medida | Sercil",
+    description:
+      "Desenvolvimento de sistemas web personalizados para automatizar processos, reduzir custos e escalar o seu negócio. Conheça nossa metodologia.",
+    url: "https://www.sercil.com.br/servicos/sistemas-web-sob-medida",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Sercil",
+  }
 };
 
 export default function SistemasWebSobMedidaPage() {

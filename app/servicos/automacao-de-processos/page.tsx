@@ -4,10 +4,18 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Automação de Processos | Sercil — Elimine tarefas manuais da sua operação",
+  title: "Automação de Processos | Sercil",
   description: "Automatize tarefas manuais, integre ERP, CRM e WhatsApp e elimine retrabalho. RPA, integrações e fluxos inteligentes. Diagnóstico gratuito em 20 minutos com a Sercil.",
   alternates: {
     canonical: "https://www.sercil.com.br/servicos/automacao-de-processos",
+  },
+  openGraph: {
+    title: "Automação de Processos | Sercil",
+    description: "Automatize tarefas manuais, integre ERP, CRM e WhatsApp e elimine retrabalho. RPA, integrações e fluxos inteligentes. Diagnóstico gratuito em 20 minutos com a Sercil.",
+    url: "https://www.sercil.com.br/servicos/automacao-de-processos",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Sercil",
   },
 };
 

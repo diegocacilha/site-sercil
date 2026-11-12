@@ -4,10 +4,18 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: " Sercil | Backoffice e Painéis Administrativos",
+  title: "Backoffice e Painéis Administrativos | Sercil",
   description: "Otimize a gestão interna da sua empresa com backoffices e painéis administrativos sob medida. Centralize dados, automatize aprovações e tenha controle total das operações.",
   alternates: {
     canonical: "https://www.sercil.com.br/servicos/backoffice-e-paineis-administrativos",
+  },
+  openGraph: {
+    title: "Backoffice e Painéis Administrativos | Sercil",
+    description: "Otimize a gestão interna da sua empresa com backoffices e painéis administrativos sob medida. ",
+    url: "https://www.sercil.com.br/servicos/backoffice-e-paineis-administrativos",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Sercil",
   },
 };
 

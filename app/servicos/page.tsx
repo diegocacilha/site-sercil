@@ -3,14 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Sercil | Serviços",
+  title: "Serviços | Sercil",
   description:
     "Conheça os serviços da Sercil: desenvolvimento de sistemas web sob medida, portais corporativos, automação de processos e integrações.",
   alternates: {
     canonical: "https://www.sercil.com.br/servicos",
   },
   openGraph: {
-    title: "Sercil | Serviços",
+    title: "Serviços | Sercil",
     description:
       "Soluções digitais sob medida para empresas que buscam eficiência e inovação.",
     url: "https://www.sercil.com.br/servicos",

@@ -4,12 +4,21 @@ import Metodologia from "@/components/Metodologia";
 import Tecnologias from "@/components/Tecnologias";
 
 export const metadata: Metadata = {
-  title: "Sercil | Portais Corporativos",
+  title: "Portais Corporativos | Sercil",
   description:
     "Desenvolvimento de portais corporativos para clientes, parceiros e colaboradores, com autenticação, permissões e integrações. Centralize a comunicação e os processos da sua organização.",
   alternates: {
     canonical: "https://www.sercil.com.br/servicos/portais-corporativos",
   },
+  openGraph: {
+    title: "Portais Corporativos | Sercil",
+    description:
+      "Desenvolvimento de portais corporativos para clientes, parceiros e colaboradores, com autenticação, permissões e integrações.",
+    url: "https://www.sercil.com.br/servicos/portais-corporativos",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Sercil",
+  }
 };
 
 export default function PortaisCorporativosPage() {

@@ -4,11 +4,19 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Sercil | Integração Entre Aplicações",
+  title: "Integração Entre Aplicações | Sercil",
   description: "Conecte seus sistemas, ERPs, CRMs e APIs. Elimine silos de informação e garanta que os dados fluam de forma automática e segura entre todas as suas ferramentas.",
   alternates: {
     canonical: "https://www.sercil.com.br/servicos/integracao-entre-aplicacoes",
   },
+  openGraph: {
+    title: "Integração Entre Aplicações | Sercil",
+    description: "Conecte seus sistemas, ERPs, CRMs e APIs. Elimine silos de informação e garanta que os dados fluam de forma automática e segura entre todas as suas ferramentas.",
+    url: "https://www.sercil.com.br/servicos/integracao-entre-aplicacoes",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Sercil",
+  }
 };
 
 export default function IntegracaoDeAplicacoesPage() {
@@ -103,7 +111,7 @@ export default function IntegracaoDeAplicacoesPage() {
                 alt="Servidores e infraestrutura de rede de dados"
                 fill
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw" 
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
             <div>

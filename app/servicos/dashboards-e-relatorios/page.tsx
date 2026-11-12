@@ -4,10 +4,18 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Sercil | Dashboards e Relatórios",
+  title: "Dashboards e Relatórios | Sercil",
   description: "Transforme dados em decisões. Criamos dashboards interativos e relatórios automatizados para você visualizar os indicadores do seu negócio em tempo real.",
   alternates: {
     canonical: "https://www.sercil.com.br/servicos/dashboards-e-relatorios",
+  },
+  openGraph: {
+    title: "Dashboards e Relatórios | Sercil",
+    description: "Criamos dashboards interativos e relatórios automatizados para você visualizar os indicadores do seu negócio em tempo real.",
+    url: "https://www.sercil.com.br/servicos/dashboards-e-relatorios",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Sercil",
   },
 };
 
