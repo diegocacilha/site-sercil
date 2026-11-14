@@ -22,7 +22,37 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "Sercil"
-  }
+  },
+  keywords: [
+    "dashboards",
+    "dashboards interativos",
+    "relatórios automatizados",
+    "relatórios gerenciais",
+    "inteligência de dados",
+    "business intelligence",
+    "BI sob medida",
+    "KPIs",
+    "indicadores de desempenho",
+    "dados em tempo real",
+    "painéis gerenciais",
+    "dashboard executivo",
+    "dashboard comercial",
+    "dashboard financeiro",
+    "dashboard de marketing",
+    "dashboard de RH",
+    "análise de dados",
+    "visualização de dados",
+    "consolidação de dados",
+    "fonte única de verdade",
+    "alertas automáticos",
+    "integração ERP CRM",
+    "Power BI",
+    "Looker",
+    "tomada de decisão baseada em dados",
+    "data-driven",
+    "relatórios em tempo real",
+    "monitoramento de metas",
+  ],
 };
 
 const faqItems = [
