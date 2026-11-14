@@ -22,7 +22,31 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     siteName: "Sercil"
-  }
+  },
+  keywords: [
+    "backoffice",
+    "painéis administrativos",
+    "sistema de gestão interna",
+    "backoffice sob medida",
+    "painel administrativo personalizado",
+    "controle de acessos",
+    "controle de permissões RBAC",
+    "fluxos de aprovação",
+    "workflow de aprovação",
+    "auditoria de ações",
+    "rastreabilidade de processos",
+    "gestão de clientes CRM",
+    "gestão de estoque",
+    "gestão de solicitações internas",
+    "gestão financeira interna",
+    "gestão de RH",
+    "sistema administrativo web",
+    "desenvolvimento sob medida",
+    "integração com ERP",
+    "automação de processos internos",
+    "segurança de dados",
+    "LGPD",
+  ],
 };
 
 const faqItems = [
