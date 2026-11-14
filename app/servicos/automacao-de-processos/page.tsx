@@ -21,6 +21,28 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  keywords: [
+    "automação de processos",
+    "automação de processos empresariais",
+    "RPA",
+    "robôs de software",
+    "integração de sistemas",
+    "integração ERP CRM",
+    "fluxos automatizados",
+    "eliminar tarefas manuais",
+    "reduzir erros operacionais",
+    "eficiência operacional",
+    "transformação digital",
+    "automação comercial",
+    "automação financeira",
+    "automação de atendimento",
+    "sistemas web sob medida",
+    "desenvolvimento de software",
+    "API",
+    "webhooks",
+    "WhatsApp Business API",
+    "produtividade empresarial",
+  ],
 };
 
 const faqItems = [
