@@ -22,6 +22,30 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  keywords: [
+    "serviços de tecnologia",
+    "serviços de desenvolvimento",
+    "serviços de TI",
+    "soluções digitais",
+    "soluções tecnológicas",
+    "empresa de tecnologia",
+    "empresa de desenvolvimento de software",
+    "software house",
+    "fábrica de software",
+    "desenvolvimento de sistemas",
+    "soluções sob medida",
+    "transformação digital",
+    "tecnologia para empresas",
+    "sistemas web",
+    "portais corporativos",
+    "automação de processos",
+    "integração de aplicações",
+    "dashboards e relatórios",
+    "backoffice",
+    "painéis administrativos",
+    "consultoria em tecnologia",
+    "parceiro de tecnologia",
+  ],
 };
 
 const servicos = [
@@ -140,7 +164,7 @@ export default function ServicosPage() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
-                
+
                 {/* Conteúdo do Card */}
                 <div className="flex flex-1 flex-col p-6">
                   <h2 className="text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-600">
@@ -149,7 +173,7 @@ export default function ServicosPage() {
                   <p className="mt-3 flex-1 text-gray-600">
                     {servico.descricao}
                   </p>
-                  
+
                   {/* Botão Saiba Mais */}
                   <div className="mt-6 flex items-center text-sm font-semibold text-blue-600">
                     Saiba mais
