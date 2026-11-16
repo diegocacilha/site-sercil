@@ -1,5 +1,6 @@
 import Metodologia from "@/components/Metodologia";
 import Tecnologias from "@/components/Tecnologias";
+import { getFileLastModified } from "@/lib/get-file-date";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -111,6 +112,7 @@ const jsonLd = {
       "name": "Integração de Aplicações | Sercil",
       "description": "Conecte ERPs, CRMs, APIs e sistemas legados com integrações sob medida. Elimine dados duplicados e garanta que a informação flua automaticamente entre suas ferramentas.",
       "inLanguage": "pt-BR",
+      "dateModified": getFileLastModified("app/servicos/integracao-de-aplicacoes/page.tsx"),
       "isPartOf": { "@id": "https://www.sercil.com.br/#website" }
     },
     {

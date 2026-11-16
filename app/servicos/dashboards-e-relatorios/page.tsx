@@ -1,5 +1,6 @@
 import Metodologia from "@/components/Metodologia";
 import Tecnologias from "@/components/Tecnologias";
+import { getFileLastModified } from "@/lib/get-file-date";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -109,6 +110,7 @@ const jsonLd = {
       "name": "Dashboards e Relatórios | Sercil",
       "description": "Dashboards interativos e relatórios automatizados com dados em tempo real. Centralize KPIs de todas as áreas e decida com base em evidências, não em achismo.",
       "inLanguage": "pt-BR",
+      "dateModified": getFileLastModified("app/servicos/dashboards-e-relatorios/page.tsx"),
       "isPartOf": { "@id": "https://www.sercil.com.br/#website" }
     },
     {

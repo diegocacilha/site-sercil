@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Metodologia from "@/components/Metodologia";
 import Tecnologias from "@/components/Tecnologias";
+import { getFileLastModified } from "@/lib/get-file-date";
 
 export const metadata: Metadata = {
   title: "Portais Corporativos | Sercil",
@@ -110,6 +111,7 @@ const jsonLd = {
       "name": "Portais Corporativos | Sercil",
       "description": "Portais corporativos para clientes, parceiros e colaboradores com autenticação SSO, permissões por perfil e integrações. Centralize comunicação e processos com a Sercil.",
       "inLanguage": "pt-BR",
+      "dateModified": getFileLastModified("app/servicos/portais-corporativos/page.tsx"),
       "isPartOf": { "@id": "https://www.sercil.com.br/#website" }
     },
     {

@@ -1,5 +1,6 @@
 import Metodologia from "@/components/Metodologia";
 import Tecnologias from "@/components/Tecnologias";
+import { getFileLastModified } from "@/lib/get-file-date";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -103,6 +104,7 @@ const jsonLd = {
       "name": "Backoffice e Painéis Administrativos | Sercil",
       "description": "Backoffices e painéis administrativos sob medida com controle de acessos, aprovações e auditoria. Centralize a gestão interna da sua empresa com a Sercil.",
       "inLanguage": "pt-BR",
+      "dateModified": getFileLastModified("app/servicos/backoffice-e-paineis-administrativos/page.tsx"),
       "isPartOf": { "@id": "https://www.sercil.com.br/#website" }
     },
     {

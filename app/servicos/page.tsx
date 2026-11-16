@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { getFileLastModified } from "@/lib/get-file-date";
 
 export const metadata: Metadata = {
   title: "Serviços | Sercil",
@@ -125,6 +126,7 @@ const jsonLd = {
       "description": "Conheça os serviços da Sercil: desenvolvimento de sistemas web sob medida, portais corporativos, automação de processos e integrações.",
       "inLanguage": "pt-BR",
       "isPartOf": { "@id": "https://www.sercil.com.br/#website" },
+      "dateModified": getFileLastModified("app/servicos/page.tsx"),
       "mainEntity": {
         "@type": "ItemList",
         "numberOfItems": 6,

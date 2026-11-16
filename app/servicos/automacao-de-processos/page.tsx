@@ -1,5 +1,6 @@
 import Metodologia from "@/components/Metodologia";
 import Tecnologias from "@/components/Tecnologias";
+import { getFileLastModified } from "@/lib/get-file-date";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -67,6 +68,7 @@ const faqItems = [
     a: "Cobramos por projeto, com escopo definido após o diagnóstico. Você sabe exatamente o que recebe e quando. Também oferecemos planos de evolução contínua, caso queira adicionar novos fluxos ao longo do tempo.",
   },
 ];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -98,6 +100,7 @@ const jsonLd = {
       "name": "Automação de Processos | Sercil",
       "description": "Automatize tarefas manuais, integre ERP, CRM e WhatsApp e elimine retrabalho.",
       "inLanguage": "pt-BR",
+      "dateModified": getFileLastModified("app/servicos/automacao-de-processos/page.tsx"),
       "isPartOf": { "@id": "https://www.sercil.com.br/#website" }
     },
     {

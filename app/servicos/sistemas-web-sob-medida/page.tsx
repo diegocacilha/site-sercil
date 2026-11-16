@@ -1,5 +1,6 @@
 import Metodologia from "@/components/Metodologia";
 import Tecnologias from "@/components/Tecnologias";
+import { getFileLastModified } from "@/lib/get-file-date";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -116,6 +117,7 @@ const jsonLd = {
       "name": "Sistemas Web Sob Medida | Sercil",
       "description": "Desenvolvimento de sistemas web personalizados para automatizar processos, reduzir custos e escalar o negócio. Método em 30 dias, código-fonte seu e integração com seu ERP.",
       "inLanguage": "pt-BR",
+      "dateModified": getFileLastModified("app/servicos/sistemas-web-sob-medida/page.tsx"),
       "isPartOf": { "@id": "https://www.sercil.com.br/#website" }
     },
     {
