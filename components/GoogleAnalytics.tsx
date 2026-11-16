@@ -21,6 +21,10 @@ export default function GoogleAnalytics() {
             gtag('js', new Date());
             gtag('config', '${GA_MEASUREMENT_ID}', {
               page_path: window.location.pathname,
+              // Força o cookie para o domínio principal da Sercil
+              cookie_domain: '.sercil.com.br',
+              // Adiciona as flags de segurança exigidas pelos navegadores
+              cookie_flags: 'SameSite=None;Secure'
             });
           `,
         }}
