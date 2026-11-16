@@ -78,17 +78,67 @@ const faqItems = [
   },
 ];
 
-const faqJsonLd = {
+const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.a,
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.sercil.com.br/#organization",
+      "name": "Sercil",
+      "url": "https://www.sercil.com.br/",
+      "logo": "https://www.sercil.com.br/logo.png",
+      "description": "Empresa de tecnologia especializada em automação de processos, integração de sistemas e desenvolvimento de software sob medida.",
+      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "sameAs": [
+        "https://www.linkedin.com/company/sercil",
+        "https://www.crunchbase.com/organization/sercil"
+      ]
     },
-  })),
+    {
+      "@type": "WebSite",
+      "@id": "https://www.sercil.com.br/#website",
+      "url": "https://www.sercil.com.br/",
+      "name": "Sercil",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://www.sercil.com.br/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.sercil.com.br/servicos/dashboards-e-relatorios/#webpage",
+      "url": "https://www.sercil.com.br/servicos/dashboards-e-relatorios",
+      "name": "Dashboards e Relatórios | Sercil",
+      "description": "Dashboards interativos e relatórios automatizados com dados em tempo real. Centralize KPIs de todas as áreas e decida com base em evidências, não em achismo.",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://www.sercil.com.br/#website" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.sercil.com.br/servicos/dashboards-e-relatorios/#service",
+      "name": "Dashboards e Relatórios",
+      "serviceType": "Business Intelligence, Dashboards e Relatórios Automatizados",
+      "description": "Desenvolvemos dashboards interativos e relatórios automatizados que consolidam dados de ERP, CRM e outras fontes em tempo real, com controle de acesso por perfil e alertas automáticos de metas.",
+      "provider": { "@id": "https://www.sercil.com.br/#organization" },
+      "areaServed": { "@type": "Country", "name": "Brasil" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sercil.com.br/servicos/dashboards-e-relatorios/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sercil.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://www.sercil.com.br/servicos" },
+        { "@type": "ListItem", "position": 3, "name": "Dashboards e Relatórios" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.sercil.com.br/servicos/dashboards-e-relatorios/#faq",
+      "mainEntity": faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a }
+      }))
+    }
+  ]
 };
 
 export default function DashboardsRelatoriosPage() {
@@ -97,7 +147,7 @@ export default function DashboardsRelatoriosPage() {
       {/* FAQ Schema JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       {/* Hero Section */}

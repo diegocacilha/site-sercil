@@ -85,17 +85,67 @@ const faqItems = [
   },
 ];
 
-const faqJsonLd = {
+const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.a,
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.sercil.com.br/#organization",
+      "name": "Sercil",
+      "url": "https://www.sercil.com.br/",
+      "logo": "https://www.sercil.com.br/logo.png",
+      "description": "Empresa de tecnologia especializada em automação de processos, integração de sistemas e desenvolvimento de software sob medida.",
+      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "sameAs": [
+        "https://www.linkedin.com/company/sercil",
+        "https://www.crunchbase.com/organization/sercil"
+      ]
     },
-  })),
+    {
+      "@type": "WebSite",
+      "@id": "https://www.sercil.com.br/#website",
+      "url": "https://www.sercil.com.br/",
+      "name": "Sercil",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://www.sercil.com.br/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.sercil.com.br/servicos/sistemas-web-sob-medida/#webpage",
+      "url": "https://www.sercil.com.br/servicos/sistemas-web-sob-medida",
+      "name": "Sistemas Web Sob Medida | Sercil",
+      "description": "Desenvolvimento de sistemas web personalizados para automatizar processos, reduzir custos e escalar o negócio. Método em 30 dias, código-fonte seu e integração com seu ERP.",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://www.sercil.com.br/#website" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.sercil.com.br/servicos/sistemas-web-sob-medida/#service",
+      "name": "Sistemas Web Sob Medida",
+      "serviceType": "Desenvolvimento de Software e Sistemas Web Sob Medida",
+      "description": "Desenvolvemos sistemas web personalizados com método de entrega por capítulos (primeiro módulo em 30 dias), código-fonte e arquitetura do cliente, integração com ERP, CRM e APIs externas, e evolução semanal com base no uso real da equipe.",
+      "provider": { "@id": "https://www.sercil.com.br/#organization" },
+      "areaServed": { "@type": "Country", "name": "Brasil" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sercil.com.br/servicos/sistemas-web-sob-medida/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sercil.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://www.sercil.com.br/servicos" },
+        { "@type": "ListItem", "position": 3, "name": "Sistemas Web Sob Medida" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.sercil.com.br/servicos/sistemas-web-sob-medida/#faq",
+      "mainEntity": faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a }
+      }))
+    }
+  ]
 };
 
 export default function SistemasWebSobMedidaPage() {
@@ -104,7 +154,7 @@ export default function SistemasWebSobMedidaPage() {
       {/* FAQ Schema JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       {/* Hero Section */}

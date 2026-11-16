@@ -93,9 +93,100 @@ const servicos = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.sercil.com.br/#organization",
+      "name": "Sercil",
+      "url": "https://www.sercil.com.br/",
+      "logo": "https://www.sercil.com.br/logo.png",
+      "description": "Empresa de tecnologia especializada em automação de processos, integração de sistemas e desenvolvimento de software sob medida.",
+      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "sameAs": [
+        "https://www.linkedin.com/company/sercil",
+        "https://www.crunchbase.com/organization/sercil"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.sercil.com.br/#website",
+      "url": "https://www.sercil.com.br/",
+      "name": "Sercil",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://www.sercil.com.br/#organization" }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://www.sercil.com.br/servicos/#webpage",
+      "url": "https://www.sercil.com.br/servicos",
+      "name": "Serviços | Sercil",
+      "description": "Conheça os serviços da Sercil: desenvolvimento de sistemas web sob medida, portais corporativos, automação de processos e integrações.",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://www.sercil.com.br/#website" },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": 6,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://www.sercil.com.br/servicos/sistemas-web-sob-medida",
+            "name": "Sistemas Web Sob Medida"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://www.sercil.com.br/servicos/portais-corporativos",
+            "name": "Portais Corporativos"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://www.sercil.com.br/servicos/automacao-de-processos",
+            "name": "Automação de Processos"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "url": "https://www.sercil.com.br/servicos/integracao-de-aplicacoes",
+            "name": "Integração de Aplicações"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "url": "https://www.sercil.com.br/servicos/dashboards-e-relatorios",
+            "name": "Dashboards e Relatórios"
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "url": "https://www.sercil.com.br/servicos/backoffice-e-paineis-administrativos",
+            "name": "Backoffice e Painéis Administrativos"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sercil.com.br/servicos/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sercil.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Serviços" }
+      ]
+    }
+  ]
+};
+
 export default function ServicosPage() {
   return (
     <main className="bg-white">
+      {/* Structured Data (JSON-LD) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section className="relative bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-40">

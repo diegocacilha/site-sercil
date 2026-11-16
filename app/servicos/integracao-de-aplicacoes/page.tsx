@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Conecte ERPs, CRMs, APIs e sistemas legados com integrações sob medida. Elimine dados duplicados e garanta que a informação flua automaticamente entre suas ferramentas.",
   alternates: {
-    canonical: "https://www.sercil.com.br/servicos/integracao-entre-aplicacoes",
+    canonical: "https://www.sercil.com.br/servicos/integracao-de-aplicacoes",
   },
   robots: {
     index: true,
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Integração de Aplicações | Sercil",
     description:
       "Conecte ERPs, CRMs, APIs e sistemas legados com integrações sob medida. Elimine dados duplicados e garanta que a informação flua automaticamente entre suas ferramentas.",
-    url: "https://www.sercil.com.br/servicos/integracao-entre-aplicacoes",
+    url: "https://www.sercil.com.br/servicos/integracao-de-aplicacoes",
     type: "website",
     locale: "pt_BR",
     siteName: "Sercil",
@@ -80,17 +80,67 @@ const faqItems = [
   },
 ];
 
-const faqJsonLd = {
+const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.a,
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.sercil.com.br/#organization",
+      "name": "Sercil",
+      "url": "https://www.sercil.com.br/",
+      "logo": "https://www.sercil.com.br/logo.png",
+      "description": "Empresa de tecnologia especializada em automação de processos, integração de sistemas e desenvolvimento de software sob medida.",
+      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "sameAs": [
+        "https://www.linkedin.com/company/sercil",
+        "https://www.crunchbase.com/organization/sercil"
+      ]
     },
-  })),
+    {
+      "@type": "WebSite",
+      "@id": "https://www.sercil.com.br/#website",
+      "url": "https://www.sercil.com.br/",
+      "name": "Sercil",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://www.sercil.com.br/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.sercil.com.br/servicos/integracao-de-aplicacoes/#webpage",
+      "url": "https://www.sercil.com.br/servicos/integracao-de-aplicacoes",
+      "name": "Integração de Aplicações | Sercil",
+      "description": "Conecte ERPs, CRMs, APIs e sistemas legados com integrações sob medida. Elimine dados duplicados e garanta que a informação flua automaticamente entre suas ferramentas.",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://www.sercil.com.br/#website" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.sercil.com.br/servicos/integracao-de-aplicacoes/#service",
+      "name": "Integração de Aplicações",
+      "serviceType": "Integração de Sistemas e APIs",
+      "description": "Conectamos ERPs, CRMs, APIs REST/SOAP, webhooks e sistemas legados com integrações sob medida, sincronização em tempo real ou agendada, monitoramento de falhas e autenticação segura (OAuth, tokens).",
+      "provider": { "@id": "https://www.sercil.com.br/#organization" },
+      "areaServed": { "@type": "Country", "name": "Brasil" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sercil.com.br/servicos/integracao-de-aplicacoes/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sercil.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://www.sercil.com.br/servicos" },
+        { "@type": "ListItem", "position": 3, "name": "Integração de Aplicações" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.sercil.com.br/servicos/integracao-de-aplicacoes/#faq",
+      "mainEntity": faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a }
+      }))
+    }
+  ]
 };
 
 export default function IntegracaoDeAplicacoesPage() {
@@ -99,7 +149,7 @@ export default function IntegracaoDeAplicacoesPage() {
       {/* FAQ Schema JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       {/* Hero Section */}

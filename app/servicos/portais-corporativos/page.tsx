@@ -79,17 +79,67 @@ const faqItems = [
   },
 ];
 
-const faqJsonLd = {
+const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.a,
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.sercil.com.br/#organization",
+      "name": "Sercil",
+      "url": "https://www.sercil.com.br/",
+      "logo": "https://www.sercil.com.br/logo.png",
+      "description": "Empresa de tecnologia especializada em automação de processos, integração de sistemas e desenvolvimento de software sob medida.",
+      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "sameAs": [
+        "https://www.linkedin.com/company/sercil",
+        "https://www.crunchbase.com/organization/sercil"
+      ]
     },
-  })),
+    {
+      "@type": "WebSite",
+      "@id": "https://www.sercil.com.br/#website",
+      "url": "https://www.sercil.com.br/",
+      "name": "Sercil",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://www.sercil.com.br/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.sercil.com.br/servicos/portais-corporativos/#webpage",
+      "url": "https://www.sercil.com.br/servicos/portais-corporativos",
+      "name": "Portais Corporativos | Sercil",
+      "description": "Portais corporativos para clientes, parceiros e colaboradores com autenticação SSO, permissões por perfil e integrações. Centralize comunicação e processos com a Sercil.",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://www.sercil.com.br/#website" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.sercil.com.br/servicos/portais-corporativos/#service",
+      "name": "Portais Corporativos",
+      "serviceType": "Desenvolvimento de Portais Corporativos sob Medida",
+      "description": "Desenvolvemos portais corporativos para clientes, parceiros, colaboradores e fornecedores com autenticação SSO, MFA, controle de acesso por perfil (RBAC), gestão documental, workflows internos e integração com ERP, CRM e RH, em conformidade com a LGPD.",
+      "provider": { "@id": "https://www.sercil.com.br/#organization" },
+      "areaServed": { "@type": "Country", "name": "Brasil" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sercil.com.br/servicos/portais-corporativos/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sercil.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://www.sercil.com.br/servicos" },
+        { "@type": "ListItem", "position": 3, "name": "Portais Corporativos" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.sercil.com.br/servicos/portais-corporativos/#faq",
+      "mainEntity": faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a }
+      }))
+    }
+  ]
 };
 
 export default function PortaisCorporativosPage() {
@@ -98,7 +148,7 @@ export default function PortaisCorporativosPage() {
       {/* FAQ Schema JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       {/* Hero Section */}
