@@ -67,27 +67,75 @@ const faqItems = [
     a: "Cobramos por projeto, com escopo definido após o diagnóstico. Você sabe exatamente o que recebe e quando. Também oferecemos planos de evolução contínua, caso queira adicionar novos fluxos ao longo do tempo.",
   },
 ];
-
-const faqJsonLd = {
+const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqItems.map((item) => ({
-    "@type": "Question",
-    name: item.q,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.a,
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.sercil.com.br/#organization",
+      "name": "Sercil",
+      "url": "https://www.sercil.com.br/",
+      "logo": "https://www.sercil.com.br/logo.png",
+      "description": "Empresa de tecnologia especializada em automação de processos, integração de sistemas e desenvolvimento de software sob medida.",
+      "areaServed": { "@type": "Country", "name": "Brasil" },
+      "sameAs": [
+        "https://www.linkedin.com/company/sercil",
+        "https://www.crunchbase.com/organization/sercil"
+      ]
     },
-  })),
+    {
+      "@type": "WebSite",
+      "@id": "https://www.sercil.com.br/#website",
+      "url": "https://www.sercil.com.br/",
+      "name": "Sercil",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://www.sercil.com.br/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.sercil.com.br/servicos/automacao-de-processos/#webpage",
+      "url": "https://www.sercil.com.br/servicos/automacao-de-processos",
+      "name": "Automação de Processos | Sercil",
+      "description": "Automatize tarefas manuais, integre ERP, CRM e WhatsApp e elimine retrabalho.",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://www.sercil.com.br/#website" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.sercil.com.br/servicos/automacao-de-processos/#service",
+      "name": "Automação de Processos",
+      "serviceType": "Automação de Processos Empresariais",
+      "description": "Criamos fluxos automatizados, robôs de software (RPA) e integrações entre sistemas para eliminar tarefas manuais e reduzir erros.",
+      "provider": { "@id": "https://www.sercil.com.br/#organization" },
+      "areaServed": { "@type": "Country", "name": "Brasil" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sercil.com.br/servicos/automacao-de-processos/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sercil.com.br/" },
+        { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://www.sercil.com.br/servicos" },
+        { "@type": "ListItem", "position": 3, "name": "Automação de Processos" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.sercil.com.br/servicos/automacao-de-processos/#faq",
+      "mainEntity": faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a }
+      }))
+    }
+  ]
 };
 
 export default function AutomacaoDeProcessosPage() {
   return (
     <main className="bg-white">
-      {/* FAQ Schema JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       {/* Hero Section */}
