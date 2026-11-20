@@ -1,56 +1,118 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
+
+const commitments = [
+  {
+    title: "Diagnóstico em 7 dias",
+    desc: "Você enxerga onde o processo trava, antes de escrever uma linha de código.",
+  },
+  {
+    title: "Primeiro módulo em 30 dias",
+    desc: "No ar, integrado ao seu WhatsApp, planilha e ERP.",
+  },
+  {
+    title: "O código-fonte é seu",
+    desc: "Quer tocar sozinho ou trocar de parceiro? Nada te prende.",
+  },
+];
+
+const scatteredTools = ["WhatsApp", "Planilha", "ERP"];
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-slate-900">
-      {/* Imagem de Fundo Nítida (Estilo Inline para garantir exibição) */}
-      <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
-        <Image
-          src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop"
-          alt="Ambiente de escritório moderno"
-          fill
-          style={{ objectFit: 'cover', objectPosition: 'center' }}
-          priority
-        />
-        {/* Gradiente para garantir a leitura do texto à esquerda, mantendo o lado direito da imagem visível */}
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background: 'linear-gradient(to right, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.8) 50%, rgba(15, 23, 42, 0.2) 100%)',
-            zIndex: 1
-          }}
-        />
-      </div>
+      {/* Decoração de fundo (sem imagem externa) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -top-40 right-0 h-[560px] w-[560px] rounded-full bg-blue-600/20 blur-[140px]"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-0 left-0 h-[360px] w-[360px] rounded-full bg-emerald-500/10 blur-[120px]"
+      />
 
-      {/* Conteúdo - zIndex relativo para ficar acima da imagem */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-green-400 text-sm font-medium mb-8 border border-white/20">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
-            </span>
-            Software House especializada
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+          {/* Lado esquerdo: promessa + CTA */}
+          <div>
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-sm font-medium text-green-400 backdrop-blur-md">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400"></span>
+              </span>
+              Sistemas sob medida para pequenas e médias empresas
+            </div>
+
+            <h1 className="mb-6 text-balance text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-[56px]">
+              Pare de ser o integrador da sua empresa.{" "}
+              <span className="text-blue-400">
+                WhatsApp, planilha e ERP funcionando como um sistema só.
+              </span>
+            </h1>
+
+            <p className="mb-10 max-w-2xl text-balance text-lg text-gray-300 sm:text-xl">
+              Sua empresa cresceu e o controle não acompanhou. Integramos o que
+              você já usa em um sistema web feito para o seu processo, e o
+              código é seu.
+            </p>
+
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="#contato"
+                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3.5 font-medium text-white shadow-lg transition-colors hover:bg-blue-500"
+              >
+                Quero ver um protótipo grátis
+                <svg
+                  className="ml-2 h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </Link>
+              <Link
+                href="#servicos"
+                className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 px-6 py-3.5 font-medium text-white backdrop-blur-md transition-colors hover:bg-white/20"
+              >
+                Como funciona
+              </Link>
+            </div>
+
+            <p className="mt-4 text-sm text-gray-400">
+              Sem compromisso. Você recebe o link da call e o protótipo
+              desenhado em até 24h.
+            </p>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white text-balance leading-tight mb-6">
-            Transformamos ideias em{" "}
-            <span className="text-blue-400">sistemas que geram resultados</span>
-          </h1>
+          {/* Lado direito: do "Frankenstein" ao sistema único */}
+          <div className="relative rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-md sm:p-8">
+            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+              Hoje
+            </p>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {scatteredTools.map((tool) => (
+                <span
+                  key={tool}
+                  className="rounded-full border border-dashed border-slate-500 px-4 py-2 text-sm text-slate-300"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+            <p className="mt-3 text-sm text-slate-400">
+              Nada conversa entre si. Você é o único ponto de integração.
+            </p>
 
-          <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mb-10 text-balance">
-            Desenvolvimento de aplicações web sob medida para empresas que
-            buscam eficiência, escalabilidade e uma presença digital robusta.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/servicos" className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-500 transition-colors shadow-lg"            >
-              Nossos Serviços
+            <div className="my-6 flex justify-center text-slate-500" aria-hidden="true">
               <svg
-                className="ml-2 w-4 h-4"
+                className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -59,35 +121,47 @@ export default function Hero() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  d="M19 14l-7 7m0 0l-7-7m7 7V3"
                 />
               </svg>
-            </Link>
-            <Link
-              href="#contato"
-              className="inline-flex items-center justify-center px-6 py-3 bg-white/10 text-white font-medium rounded-lg border border-white/20 hover:bg-white/20 backdrop-blur-md transition-colors"
-            >
-              Entrar em Contato
-            </Link>
+            </div>
+
+            <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400">
+              Com a Sercil
+            </p>
+            <div className="mt-3 rounded-2xl bg-white p-5">
+              <p className="font-semibold text-zinc-900">Um fluxo só</p>
+              <p className="mt-1 text-sm text-zinc-600">
+                Um dado entra uma vez e alimenta pedidos, financeiro e
+                relatórios.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {scatteredTools.map((tool) => (
+                  <span
+                    key={tool}
+                    className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700"
+                  >
+                    {tool} ✓
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="mt-16 lg:mt-24 max-w-2xl">
-          <div className="flex flex-wrap gap-8 sm:gap-12 bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-2xl">
-            <div>
-              <div className="text-3xl font-semibold text-white">5+</div>
-              <div className="text-sm text-gray-400">anos de experiência</div>
+        {/* Compromissos (substituem os números genéricos) */}
+        <div className="mt-16 grid gap-4 md:grid-cols-3 lg:mt-20">
+          {commitments.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-md"
+            >
+              <h3 className="font-semibold text-white">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-400">
+                {item.desc}
+              </p>
             </div>
-            <div>
-              <div className="text-3xl font-semibold text-white">20+</div>
-              <div className="text-sm text-gray-400">projetos entregues</div>
-            </div>
-            <div>
-              <div className="text-3xl font-semibold text-white">100%</div>
-              <div className="text-sm text-gray-400">clientes satisfeitos</div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
